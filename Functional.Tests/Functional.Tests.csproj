@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="FreeTest.cs" />
+    <Compile Include="MaybeTest.cs" />
     <Compile Include="ReaderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

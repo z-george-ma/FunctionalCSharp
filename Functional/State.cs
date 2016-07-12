@@ -57,11 +57,11 @@ namespace Functional
                 return Tuple.Create(newState, Unit.Default);
             };
         
-        public static Tuple<TState, TResult> Run<TState, TResult>(this State<TState, TResult> self, TState initState) =>
-            self(initState);
-        public static TResult Eval<TState, TResult>(this State<TState, TResult> self, TState initState) =>
-            self(initState).Item2;
-        public static TState Exec<TState, TResult>(this State<TState, TResult> self, TState initState) =>
-            self(initState).Item1;
+        public static Tuple<TState, TResult> Run<TState, TResult>(this State<TState, TResult> self, TState state) =>
+            self(state);
+        public static TResult Eval<TState, TResult>(this State<TState, TResult> self, TState state) =>
+            self(state).Item2;
+        public static TState Exec<TState, TResult>(this State<TState, TResult> self, TState state) =>
+            self(state).Item1;
     }
 }

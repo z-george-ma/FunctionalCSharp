@@ -25,6 +25,9 @@ namespace Functional
                 return mapper(t, selector(t)(env));
             };
 
+        public static Reader<TEnvNew, T> WithReaderT<TEnv, T, TEnvNew>(this Reader<TEnv, T> self, Func<TEnvNew, TEnv> mapper) =>
+            env => self(mapper(env));
+
         public static T Run<TEnv, T>(this Reader<TEnv, T> self, TEnv env) =>
             self(env);
     }

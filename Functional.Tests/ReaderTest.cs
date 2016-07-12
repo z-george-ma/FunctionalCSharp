@@ -43,7 +43,10 @@ namespace Functional.Tests
 
             var random = new Random().Next();
             RandomGenerator generator = () => random;
-            Assert.AreEqual(left(generator), right(generator));
+
+            var leftResult = left(generator);
+            var rightResult = right(generator);
+            Assert.AreEqual(leftResult, rightResult);
         }
 
         [TestMethod]
@@ -55,7 +58,10 @@ namespace Functional.Tests
 
             var random = new Random().Next();
             RandomGenerator generator = () => random;
-            Assert.AreEqual(left(generator), right(generator));
+
+            var leftResult = left(generator);
+            var rightResult = right(generator);
+            Assert.AreEqual(leftResult, rightResult);
         }
 
         [TestMethod]
@@ -70,7 +76,10 @@ namespace Functional.Tests
 
             var random = new Random().Next();
             RandomGenerator generator = () => random;
-            Assert.AreEqual(left(generator), right(generator));
+            
+            var leftResult = left(generator);
+            var rightResult = right(generator);
+            Assert.AreEqual(leftResult, rightResult);
         }
     }
 }
